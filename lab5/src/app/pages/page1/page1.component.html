@@ -1,0 +1,13 @@
+<div>
+    <h2>Задание 2</h2>
+    <h3>Студенты</h3>
+    <ul>
+        <li *ngFor="let student of students"> {{student.name}} {{student.surname}} {{student.group}}</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Задание 3, при нажатии на кнопку будет попытка загрузить файлы из несуществуещего файла, 
+        <br>interceptor увидит её и напишет в консоль "This is server error" и текст ошибки.</h2>
+    <button (click)="onLoadOtherData()">Загрузить другие данные</button>
+</div>
