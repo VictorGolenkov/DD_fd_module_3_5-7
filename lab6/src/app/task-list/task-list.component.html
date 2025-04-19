@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let task of tasks">
+        {{ task.id }}: {{ task.title }} ({{ task.type }} - {{ task.status }}) <br/>
+        <small>Создатель: {{ task.creator }} | Исполнитель: {{ task.assignee }} | Дата создания: {{ task.createdAt | date:'short' }}</small>
+        <br/>
+        <small>Описание: {{task.description}} </small>
+    </li>
+</ul>
+
+
+

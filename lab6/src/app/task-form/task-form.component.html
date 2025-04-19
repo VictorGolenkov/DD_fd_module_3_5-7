@@ -1,0 +1,29 @@
+<form (ngSubmit)="addTask()">
+    <label for="type" class="element">Тип:</label>
+    <select [(ngModel)]="newTask.type" name="type">
+      <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+    </select>
+  
+    <label for="priority" class="element">Приоритет:</label>
+    <select [(ngModel)]="newTask.priority" name="priority">
+      <option *ngFor="let priority of priorities" [value]="priority">{{ priority }}</option>
+    </select>
+  
+    <label for="status" class="element">Статус:</label>
+    <input [(ngModel)]="newTask.status" name="status" required />
+  
+    <label for="title" class="element">Заголовок:</label>
+    <input [(ngModel)]="newTask.title" name="title" required />
+  
+    <label for="description" class="element">Описание:</label>
+    <textarea [(ngModel)]="newTask.description" name="description"></textarea>
+  
+    <label for="assignee" class="element">Исполнитель:</label>
+    <input [(ngModel)]="newTask.assignee" name="assignee" />
+  
+    <label for="creator" class="element">Создатель:</label>
+    <input [(ngModel)]="newTask.creator" name="creator" required />
+  
+    <button type="submit" class="element">Добавить задачу</button>
+  </form>
+  
